@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %link{:rel => :stylesheet, :type => :"text/css", :href => "static/styles.css"}
+    %link{:rel => :stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:400,700"}
+  %body
+    %ul
+      %li
+        %a{:href => "styleguide.html"} styleguide
+    = Haml::Engine.new(File.read(File.dirname(__FILE__) + "/#{filename}")).render
+
