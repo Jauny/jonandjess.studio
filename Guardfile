@@ -1,20 +1,11 @@
-# A sample Guardfile
+# A Guardfile
 # More info at https://github.com/guard/guard#readme
 
-## Uncomment and set this to only include directories you want to watch
+# Only watch the /views directory
 directories %w(views) \
  .select{|d| Dir.exists?(d) ? d : UI.warning("Directory #{d} does not exist")}
 
-## Note: if you are using the `directories` clause above and you are not
-## watching the project directory ('.'), then you will want to move
-## the Guardfile to a watched dir and symlink it back, e.g.
-#
-#  $ mkdir config
-#  $ mv Guardfile config/
-#  $ ln -s config/Guardfile .
-#
-# and, you'll have to watch "config/Guardfile" instead of "Guardfile"
-
+# Run rake compile when a views/*.haml file is changed
 guard 'rake', :task => 'compile' do
   watch(%r{^views/.+\.haml$})
 end
