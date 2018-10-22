@@ -14,16 +14,16 @@ def compile(target, src)
   end
 end
 
+task :dev do
+  sh "bundle exec guard"
+end
+
 FileList['views/*.haml'].each do |src|
   target = src.gsub("views/", "").gsub("haml", "html")
   file target => src do |t|
     compile target, src
   end
-  task :default => target
-end
-
-task :default do
-  puts "running default"
+  task :compile => target
 end
 
 #task :build do
