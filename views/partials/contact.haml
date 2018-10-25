@@ -7,8 +7,10 @@
   %form{:action => 'https://formspree.io/hello@jonandjess.studio', :method => 'POST'}
     %input{:type => 'text', :name => 'name', :autocomplete => 'nope'}
     %h5 name
-    %input{:type => 'email', :name => '_replyto'}
+    %input{:type => 'email', :name => 'email'}
     %h5 email
     %textarea{:name => 'message'}
     %h5 message
+    %input{:type => 'hidden', :name => '_next', :value => 'http://jonandjess.studio'}
+    %input{:type => 'hidden', :name => '_subject', :value => 'Hello Jon and Jess!'}
     %button{:type => 'submit'} Submit
