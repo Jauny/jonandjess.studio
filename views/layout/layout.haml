@@ -5,18 +5,7 @@
     %link{:rel => :stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:400,700"}
   %body
     .container
-      .nav
-        %a#header-logo{:href => "index.html"}
-          %img{:src => "static/logotype.svg"}
-        %ul
-          %li
-            %a{:href => "about.html"} about
-          %li
-            %a{:href => "index.html"} work
-          %li
-            %a{:href => "contact.html"} contact
-          %li
-            %a{:href => "styleguide.html"} styleguide
+      = partial :nav
 
     = yield
 
