@@ -6,6 +6,7 @@
   %body
     .container
       .nav
+        %img{:src => "static/logotype.svg"}
         %ul
           %li
             %a{:href => "index.html"} home
@@ -15,5 +16,12 @@
             %a{:href => "index.html"} work
           %li
             %a{:href => "styleguide.html"} styleguide
-      = yield
+
+    = yield
+
+    .container
+      .footer
+        %p C SpaceBar BV
+        %img{:src => "static/logodot.svg"}
+    
 

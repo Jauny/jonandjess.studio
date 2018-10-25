@@ -1,1 +1,106 @@
-%h1 salut c'est l'index compiled from guard ran from rake
+.container
+  .logo
+    %img{:src => "static/logotype.svg"}
+
+  .who
+    %h5 who we are
+    %h1
+      We are a creative and engineering studio led by Jon and Jess. 
+      We solve business problems through design, storytelling, and code.
+    %h2
+      Our founders met in 2014 while working on the Growth Team at Uber
+      and have since teamed up to help other companies build their products, grow their brands,
+      and inspire their customers.
+
+  .us
+    .one
+      .shot.him
+        .overlay
+      %h1 Jon 
+      %h5 Left brain
+      %p 
+        Jon was born in Paris and grew up in Montreal where he studied Finance.
+        He hated it, so he moved to San Francisco to become an engineer.
+        He spent over 4 years at Uber, building and scaling growth systems,
+        enabling the company to onboard hundreds of thousands of drivers per week across hundreds of countries.
+        When not writing code, you can find Jon playing League of Legends, supporting Paris Saint-Germain
+        or cooking a mean coq au vin. Often all at the same time.
+        Jess wanted me to add some text here it's as long as hers. I don't think she has noticed yet!
+    .one
+      .shot.her
+        .overlay
+      %h1 Jess 
+      %h5 Right brain
+      %p 
+        Jess is a San Francisco native with a background in art direction, design and creative leadership.
+        Prior to co-founding Jon&Jess, she built and led Uber's creative team in Amsterdam
+        and was a lead designer on Uber's Growth Team in San Francisco. Before joining Uber,
+        she served as an art director (and in-house dog sitter) at a long roster of ad agencies
+        including CP+B (Ad Age's Agency of the Decade) and Evolution Bureau.
+        Outside Jon&Jess, Jess is an enthusiastic dog mom,
+        serial hobbyist and founder of the learn-for-leisure lecture series The Social Study.
+
+  .capabilities
+    %h1 Capabilities
+    %hr
+    .skills
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+      .skill
+        %img{:src => "static/logotype.svg"}
+        %h5 digital design
+
+.testimonials
+  .container
+    %h1 Jon&Jess has been an invaluable partner as Bird set out to launch and grow our EMEA market. They understand the value of speed, quality, and flexibility when it comes to working with hyper-growth companies.
+    .name Jan De Wulf 
+    .title Head of EMEA Brand, Bird
+
+.container
+  .contact
+    %h1 Say Hey
+    %p 
+      Want to make something together? Leave us a note below and we’ll get back to you in a jiffy.
+      Or send us an email at
+      %span.red hello@jonandjess.studio.
+    %form 
+      %input{:type => 'text'}
+      %h5 name
+      %input{:type => 'email'}
+      %h5 email
+      %input{:type => 'textarea'}
+      %h5 message
+      %button Submit
+
+:javascript 
+  const hisPicture = document.getElementsByClassName('shot him')[0]
+  const herPicture = document.getElementsByClassName('shot her')[0]
+
+  window.addEventListener('scroll', (e) => {
+    const wih = window.innerHeight / 2
+    const hisPos = hisPicture.getBoundingClientRect()
+    const hisTop = hisPos.top
+    const hisOverlay = hisPicture.children[0]
+
+    const herPos = herPicture.getBoundingClientRect()
+    const herTop = herPos.top
+    const herOverlay = herPicture.children[0]
+
+    hisOverlay.style.top = -Math.min(0, (hisTop - wih) * 0.7) + 'px'
+    hisOverlay.style.transform = `rotate(${hisTop - wih}deg)`
+
+    herOverlay.style.top = Math.min(0, (herTop - wih) * 0.7) + 'px'
+  })

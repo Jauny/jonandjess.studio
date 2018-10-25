@@ -5,9 +5,12 @@
   --darkGrey: #373737;
   --black: #000000;
   --bg-color: #F4F1ED;
+  --white: #FFFFFF;
 
   --serif: 'Libre Baskerville', serif;
   --sans-serif: 'Montserrat', sans-serif;
+
+  --section-gutter: 135px;
 }
 
 body {
@@ -15,6 +18,7 @@ body {
   font-family: var(--serif);
   font-size: 14px;
   color: var(--darkGrey);
+  margin: 0;
 }
 
 /* colors */
@@ -25,14 +29,16 @@ body {
   color: var(--blue);
 }
 
-/* typegraphy */
+/* typography */
 h1 {
   font-size: 36px;
+  font-weight: 100;
 }
 
 h2 {
   font-size: 20px;
-  font-style: italic;
+  font-style: kjc;
+  font-weight: 100;
 }
 
 h5 {
@@ -60,8 +66,11 @@ h6, .nav {
 
 /* nav */
 .nav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--darkGrey);
-  margin-bottom: 50px;
 }
 .nav ul {
   list-style: none;
@@ -74,6 +83,15 @@ h6, .nav {
 .nav ul li a {
   color: inherit;
   text-decoration: none;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--section-gutter);
+  height: 70px;
 }
 
 /* dots */
@@ -89,4 +107,135 @@ h6, .nav {
 }
 .dot.him {
   background-color: var(--blue);
+}
+
+/* forms */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+form h5 {
+  margin-top: 10px;
+}
+input {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-bottom: 1px solid var(--darkGrey);
+  background-color: transparent;
+}
+input[type=textarea] {
+  background-color: var(--white);
+  border: 1px solid var(--darkGrey);
+  height: 180px;
+}
+input:focus {
+  outline: none;
+}
+button {
+  height: 56px;
+  background-color: var(--red);
+  width: 50%;
+  border: none;
+  color: var(--white);
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+/* index */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 75px);
+}
+.logo img {
+  width: 353px;
+  max-width: 100%;
+}
+
+.who {
+  text-align: center;
+}
+
+.us {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--section-gutter);
+}
+.us .one {
+  text-align: left;
+  flex: 0 0 40%;
+}
+.us .one .shot {
+  text-align: center;
+}
+.us .one .shot {
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+}
+.us .one .shot.him {
+  background-image: url("him.png");
+  background-size: cover;
+}
+.us .one .shot.her {
+  background-image: url("her.png");
+  background-size: cover;
+}
+.us .one .shot .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.him .overlay {
+  background-color: var(--blue);
+}
+.her .overlay {
+  background-color: var(--red);
+}
+
+.capabilities {
+  margin-top: var(--section-gutter);
+}
+.capabilities .skills {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.capabilities .skill {
+  height: 100px;
+  width: 100px;
+}
+
+.testimonials {
+  margin-top: var(--section-gutter);
+  background-color: var(--darkGrey);
+  color: var(--white);
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.testimonials .name {
+  font-size: 18px;
+  font-family: var(--sans-serif);
+  text-align: right;
+}
+.testimonials .title {
+  font-size: 18px;
+  font-family: var(--serif);
+  font-style: italic;
+  text-align: right;
+}
+
+.contact {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--section-gutter);
+  text-align: center;
 }
