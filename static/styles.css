@@ -292,3 +292,19 @@ button {
   width: 250px;
   margin-left: 0;
 }
+
+/* work */
+.work .project {
+  display: flex;
+  margin-top: 30px;
+}
+.work .project .picture {
+  flex: 2;
+}
+.work .project .picture img {
+  width: 100%;
+}
+.work .project .description {
+  flex: 1;
+  padding-left: 30px;
+}
