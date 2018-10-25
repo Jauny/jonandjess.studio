@@ -10,7 +10,8 @@ STATIC_DIR = "static/"
 task :default => :compile
 task :compile => [:cleanup, :static]
 
-task :dev do
+task :dev => :compile do
+  sh "open dist/index.html"
   sh "bundle exec guard"
 end
 
