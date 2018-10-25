@@ -1,13 +1,15 @@
 require "fileutils"
 require "haml"
 
-LAYOUT_FILE = "views/layout/layout.haml"
+require_relative "renderer"
+
 SRC_DIR = "views/"
 SRC_FILES = "views/*.haml"
 DIST_DIR = "dist/"
 STATIC_DIR = "static/"
 
 task :default => :compile
+
 task :compile => [:cleanup, :static]
 
 task :dev => :compile do
@@ -34,21 +36,7 @@ end
 FileList[SRC_FILES].each do |src|
   target = src.gsub(SRC_DIR, DIST_DIR).gsub("haml", "html")
   file target => src do |t|
-    render target, src
+    compile_template src, target
   end
   task :compile => target
-end
-
-def render(target, src)
-  puts "compiling #{src} into #{target}"
-
-  layout = Haml::Engine.new(File.read(LAYOUT_FILE))
-  page = Haml::Engine.new(File.read(src))
-  html = layout.render do
-    page.render
-  end
-
-  File.open(target, "w") do |f|
-    f.write(html)
-  end
 end

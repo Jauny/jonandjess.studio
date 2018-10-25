@@ -70,20 +70,7 @@
     .title Head of EMEA Brand, Bird
 
 .container
-  .contact
-    %h1 Say Hey
-    %p 
-      Want to make something together? Leave us a note below and we'll get back to you in a jiffy.
-      Or send us an email at
-      %span.red hello@jonandjess.studio.
-    %form 
-      %input{:type => 'text', :autocomplete => 'nope'}
-      %h5 name
-      %input{:type => 'email'}
-      %h5 email
-      %textarea
-      %h5 message
-      %button Submit
+  = partial :contact
 
 :javascript 
   const hisPicture = document.getElementsByClassName('shot him')[0]
