@@ -4,11 +4,11 @@
     Want to make something together? Leave us a note below and we'll get back to you in a jiffy.
     Or send us an email at
     %span.red hello@jonandjess.studio.
-  %form 
-    %input{:type => 'text', :autocomplete => 'nope'}
+  %form{:action => 'https://formspree.io/hello@jonandjess.studio', :method => 'POST'}
+    %input{:type => 'text', :name => 'name', :autocomplete => 'nope'}
     %h5 name
-    %input{:type => 'email'}
+    %input{:type => 'email', :name => '_replyto'}
     %h5 email
-    %textarea
+    %textarea{:name => 'message'}
     %h5 message
-    %button Submit
+    %button{:type => 'submit'} Submit
