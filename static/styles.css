@@ -153,6 +153,10 @@ button {
   font-family: var(--sans-serif);
   font-weight: bold;
   font-size: 12px;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
 }
 
 /* index */
@@ -263,4 +267,30 @@ button {
 }
 .contact-page .us img {
   margin-left: auto;
+}
+
+/* about */
+.about-page .heading {
+  padding-right: 15%;
+}
+.about-page .thing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.about-page .thing img, .about-page .thing div {
+  flex: 1;
+}
+.about-page .work-with-us {
+  width: 100%;
+  padding: 40px 0;
+  background-color: var(--white);
+} 
+.about-page .work-with-us .inner {
+  padding-right: 15%;
+}
+.about-page .work-with-us button {
+  width: 250px;
+  margin-left: 0; 
 }
