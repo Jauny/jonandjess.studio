@@ -16,7 +16,7 @@ task :dev => :compile do
 end
 
 task :deploy => :compile do
-  sh "scp -r dist/* root@174.138.4.110:/var/www/jjstatic/html/"
+  sh "scp -r dist/* root@174.138.4.110:/var/www/jonandjess/v2/"
 end
 
 task :cleanup do
