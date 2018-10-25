@@ -15,6 +15,10 @@ task :dev => :compile do
   sh "bundle exec guard"
 end
 
+task :deploy => :compile do
+  sh "scp -r dist/* root@174.138.4.110:/var/www/jjstatic/html/"
+end
+
 task :cleanup do
   puts "cleanup"
   FileUtils.rm_rf(DIST_DIR)
