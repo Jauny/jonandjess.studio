@@ -11,14 +11,7 @@
   --sans-serif: 'Montserrat', sans-serif;
 
   --section-gutter: 135px;
-}
-
-body {
-  background-color: var(--bg-color);
-  font-family: var(--serif);
-  font-size: 15px;
-  color: var(--darkGrey);
-  margin: 0;
+  --header-height: 70px;
 }
 
 /* colors */
@@ -34,6 +27,9 @@ h1 {
   font-size: 36px;
   font-weight: 500;
 }
+h5 + h1 {
+  margin-top: 10px;
+}
 
 h2 {
   font-size: 20px;
@@ -46,6 +42,10 @@ h5 {
   font-size: 12px;
   font-family: var(--sans-serif);
   text-transform: uppercase;
+  margin: 0;
+}
+h1 + h5 {
+  margin-top: -15px;
 }
 
 h6, .nav {
@@ -58,6 +58,13 @@ h6, .nav {
 }
 
 /* body */
+body {
+  background-color: var(--bg-color);
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--darkGrey);
+  margin: 0;
+}
 .container {
   width: 100%;
   max-width: 697px;
@@ -67,7 +74,7 @@ h6, .nav {
 
 /* nav */
 .nav {
-  height: 70px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,20 +92,17 @@ h6, .nav {
   color: inherit;
   text-decoration: none;
 }
-.nav ul li a:hover {
-  transition: all 0.3s;
-}
 .nav ul li a.active {
   color: var(--gold);
 }
 
 /* footer */
 .footer {
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: var(--section-gutter);
-  height: 70px;
 }
 
 /* dots */
@@ -121,33 +125,27 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 40px;
 }
-form h5 {
-  margin-top: 10px;
+input, textarea {
+  margin-top: 20px;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 16px;
+}
+input:focus, textarea:focus {
+  outline: none;
 }
 input {
-  width: 100%;
   height: 23px;
   border: none;
   border-bottom: 1px solid var(--darkGrey);
   background-color: transparent;
-  font-size: 16px;
-  font-family: var(--serif);
-}
-input:focus {
-  outline: none;
 }
 textarea {
   background-color: var(--white);
   border: 1px solid var(--darkGrey);
   height: 180px;
-  width: 100%;
-  font-size: 16px;
-  font-family: var(--serif);
-}
-textarea:focus {
-  outline: none;
+  box-sizing: border-box;
 }
 button {
   height: 56px;
@@ -181,9 +179,6 @@ button:hover {
 .who {
   text-align: center;
 }
-.who h5 {
-  margin-bottom: -10px;
-}
 
 .us {
   display: flex;
@@ -195,13 +190,8 @@ button:hover {
   text-align: left;
   flex: 0 0 45%;
 }
-.us .one h1 {
-  margin-bottom: -13px;
-}
 .us .one .shot {
   text-align: center;
-}
-.us .one .shot {
   border-radius: 50%;
   width: 132px;
   height: 132px;
@@ -209,14 +199,13 @@ button:hover {
   margin-right: auto;
   overflow: hidden;
   position: relative;
+  background-size: cover;
 }
 .us .one .shot.him {
   background-image: url("him.png");
-  background-size: cover;
 }
 .us .one .shot.her {
   background-image: url("her.png");
-  background-size: cover;
 }
 .us .one .shot .overlay {
   position: absolute;
@@ -246,28 +235,24 @@ button:hover {
   margin-top: var(--section-gutter);
   background-color: var(--darkGrey);
   color: var(--white);
-  padding-top: 76px;
-  padding-bottom: 76px;
-}
-.testimonials .name {
+  padding: var(--header-height) 0;
   font-size: 18px;
   font-weight: 500;
+}
+.testimonials .name {
   font-family: var(--sans-serif);
   text-align: right;
 }
 .testimonials .title {
-  font-size: 18px;
-  font-family: var(--serif);
   font-style: italic;
   text-align: right;
-  font-weight: 500;
 }
 
 .contact {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: var(--header-height);
 }
 
 /* contact */
@@ -287,37 +272,25 @@ button:hover {
 
 /* about */
 .about-page .heading {
-  margin-top: 75px;
-  margin-bottom: 150px;
-}
-.about-page .heading h5 {
-  margin-bottom: -10px;
+  margin-top: var(--header-height);
+  margin-bottom: var(--section-gutter);
 }
 .about-page .thing {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
-}
-.about-page .thing h1 {
-  margin: 0;
+  margin-bottom: var(--section-gutter);
 }
 .about-page .thing .picture, .about-page .thing div {
   flex: 1;
 }
-.about-page .thing .picture img {
-}
 .about-page .work-with-us {
   width: 100%;
-  padding: 40px 0;
+  padding: var(--header-height) 0;
   background-color: var(--white);
 } 
 .about-page .work-with-us .inner {
   padding-right: 15%;
-}
-.about-page .work-with-us .inner h5 {
-  margin-bottom: -10px;
-  margin-top: 0px;
 }
 .about-page .work-with-us button {
   width: 250px;
