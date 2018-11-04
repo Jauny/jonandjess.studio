@@ -2,16 +2,25 @@
 %html
   %head
     %link{:rel => :stylesheet, :type => :"text/css", :href => "static/styles.css"}
-    %link{:rel => :stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,EB+Garamond,Libre+Baskerville:400,400i|Montserrat:400,500,700"}
+    %link{:rel => :stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Montserrat:500,700"}
   %body
     .container
       = partial :nav, :active => active
 
     = yield
 
-    .container
-      .footer
-        %p C SpaceBar BV
-        %img{:src => "static/logodot.svg"}
-    
+    .footer
+      .container
+        %ul 
+          %li
+            %a{:href => 'index.html'} home
+          %li 
+            %a{:href => 'about.html'} about
+          %li 
+            %a{:href => 'work.html'} work
+          %li 
+            %a{:href => 'contact.html'} contact
 
+        %img{:src => "static/logodot.svg"}
+      .container.copywrite
+        %p © Spacebar BV

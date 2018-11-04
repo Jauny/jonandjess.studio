@@ -48,7 +48,7 @@ h1 + h5 {
   margin-top: -15px;
 }
 
-h6, .nav {
+h6, .nav, .footer {
   color: var(--black);
   font-family: var(--sans-serif);
   font-size: 12px;
@@ -98,11 +98,31 @@ body {
 
 /* footer */
 .footer {
-  height: var(--header-height);
+  background-color: var(--darkGrey);
+  color: var(--white);
+  padding-top: 40px;
+  margin-top: var(--header-height);
+}
+.footer .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: var(--section-gutter);
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+.footer ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer .copywrite {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
 }
 
 /* dots */
