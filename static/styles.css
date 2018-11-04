@@ -297,13 +297,15 @@ button:hover {
 }
 .about-page .thing {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: var(--section-gutter);
 }
-.about-page .thing .picture, .about-page .thing div {
+.about-page .thing div {
   flex: 1;
 }
+.about-page .thing .picture img {
+  width: 100%;
+}
+
 .about-page .work-with-us {
   width: 100%;
   padding: var(--header-height) 0;
