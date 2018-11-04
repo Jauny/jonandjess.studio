@@ -1,13 +1,13 @@
 :root {
   --red: #F05E22;
   --blue: #00599A;
-  --gold: #B88908;
+  --gold: #C49105;
   --darkGrey: #373737;
   --black: #000000;
   --bg-color: #F4F1ED;
   --white: #FFFFFF;
 
-  --serif: 'Libre Baskerville', serif;
+  --serif: 'Cormorant Garamond', serif;
   --sans-serif: 'Montserrat', sans-serif;
 
   --section-gutter: 135px;
@@ -16,7 +16,7 @@
 body {
   background-color: var(--bg-color);
   font-family: var(--serif);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--darkGrey);
   margin: 0;
 }
@@ -32,13 +32,13 @@ body {
 /* typography */
 h1 {
   font-size: 36px;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 h2 {
   font-size: 20px;
-  font-style: kjc;
-  font-weight: 100;
+  font-style: italic;
+  font-weight: 500;
 }
 
 h5 {
@@ -54,12 +54,13 @@ h6, .nav {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* body */
 .container {
   width: 100%;
-  max-width: 992px;
+  max-width: 697px;
   margin: auto;
 }
 
@@ -83,6 +84,9 @@ h6, .nav {
 .nav ul li a {
   color: inherit;
   text-decoration: none;
+}
+.nav ul li a:hover {
+  transition: all 0.3s;
 }
 .nav ul li a.active {
   color: var(--gold);
@@ -158,6 +162,9 @@ button {
   font-size: 12px;
   cursor: pointer;
 }
+button:hover {
+  opacity: 0.8;
+}
 
 /* index */
 .logo {
@@ -174,6 +181,9 @@ button {
 .who {
   text-align: center;
 }
+.who h5 {
+  margin-bottom: -10px;
+}
 
 .us {
   display: flex;
@@ -181,8 +191,12 @@ button {
   margin-top: var(--section-gutter);
 }
 .us .one {
+  font-size: 15px;
   text-align: left;
-  flex: 0 0 40%;
+  flex: 0 0 45%;
+}
+.us .one h1 {
+  margin-bottom: -13px;
 }
 .us .one .shot {
   text-align: center;
@@ -237,6 +251,7 @@ button {
 }
 .testimonials .name {
   font-size: 18px;
+  font-weight: 500;
   font-family: var(--sans-serif);
   text-align: right;
 }
@@ -245,13 +260,14 @@ button {
   font-family: var(--serif);
   font-style: italic;
   text-align: right;
+  font-weight: 500;
 }
 
 .contact {
-  width: 50%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: var(--section-gutter);
+  margin-top: 50px;
 }
 
 /* contact */
@@ -271,8 +287,11 @@ button {
 
 /* about */
 .about-page .heading {
-  padding-right: 15%;
+  margin-top: 75px;
   margin-bottom: 150px;
+}
+.about-page .heading h5 {
+  margin-bottom: -10px;
 }
 .about-page .thing {
   display: flex;
@@ -280,8 +299,13 @@ button {
   align-items: center;
   margin-bottom: 200px;
 }
-.about-page .thing img, .about-page .thing div {
+.about-page .thing h1 {
+  margin: 0;
+}
+.about-page .thing .picture, .about-page .thing div {
   flex: 1;
+}
+.about-page .thing .picture img {
 }
 .about-page .work-with-us {
   width: 100%;
@@ -290,6 +314,10 @@ button {
 } 
 .about-page .work-with-us .inner {
   padding-right: 15%;
+}
+.about-page .work-with-us .inner h5 {
+  margin-bottom: -10px;
+  margin-top: 0px;
 }
 .about-page .work-with-us button {
   width: 250px;
