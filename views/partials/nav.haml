@@ -1,5 +1,5 @@
 .nav
-  %a#header-logo{:href => "index.html"}
+  %a#header-logo{:href => "index.html", :style => "#{active == 'index' ? 'visibility: hidden' : ''}"}
     %img{:src => "static/logotype.svg"}
   %ul
     %li

@@ -73,13 +73,13 @@
   = partial :contact
 
 :javascript 
-  document.getElementById('header-logo').style.visibility = 'hidden'
-
+  // his and hers picture animation
   const hisPicture = document.getElementsByClassName('shot him')[0]
   const herPicture = document.getElementsByClassName('shot her')[0]
 
-  window.addEventListener('scroll', (e) => {
+  const animatePictures = () => {
     const wih = window.innerHeight / 2
+
     const hisPos = hisPicture.getBoundingClientRect()
     const hisTop = hisPos.top
     const hisOverlay = hisPicture.children[0]
@@ -90,4 +90,20 @@
 
     hisOverlay.style.top = -Math.min(0, (hisTop - wih) * 0.7) + 'px'
     herOverlay.style.top = Math.min(0, (herTop - wih) * 0.7) + 'px'
+  }
+
+  // checkmarks animations
+  const checkmarks = Array.from(document.getElementsByClassName('skill'))
+  const checkmarksAnimations = () => {
+    const checkmarksTop = checkmarks[0].getBoundingClientRect().top
+    if (window.innerHeight - checkmarksTop > 100) {
+      checkmarks.forEach(el => {
+        el.style.paddingTop = 0
+      })
+    }
+  }
+
+  window.addEventListener('scroll', (e) => {
+    animatePictures()
+    checkmarksAnimations()
   })

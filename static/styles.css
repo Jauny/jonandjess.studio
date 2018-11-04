@@ -246,6 +246,11 @@ button:hover {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  height: 90px;
+}
+.capabilities .skill {
+  padding-top: 20px;
+  transition: all 1s;
 }
 .capabilities .skill img {
   width: 50%;
