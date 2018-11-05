@@ -2,6 +2,8 @@
   .logo
     %img{:src => "static/logotype.svg"}
 
+  .scrollarrow#scrollarrow
+
   .who
     %h5 who we are
     %h1
@@ -103,7 +105,20 @@
     }
   }
 
+  // scrollarrow animation
+  const arrow = document.getElementById('scrollarrow')
+  const arrowAnimation = () => {
+    const wih = window.innerHeight
+    const arrowBottom = arrow.getBoundingClientRect().bottom
+    if (wih - arrowBottom > 50) {
+      arrow.style.opacity = 0
+    } else if (wih - arrowBottom < 35) {
+      arrow.style.opacity = 100
+    }
+  }
+
   window.addEventListener('scroll', (e) => {
     animatePictures()
     checkmarksAnimations()
+    arrowAnimation()
   })
