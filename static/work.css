@@ -1,0 +1,27 @@
+/* work */
+.work .project {
+  display: flex;
+  margin-top: 30px;
+}
+.work .project .picture {
+  flex: 2;
+}
+.work .project .picture img {
+  width: 100%;
+}
+.work .project .description {
+  flex: 1;
+  padding-left: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .work .project {
+    flex-direction: column-reverse;
+  }
+  .work .project .picture {
+    margin-left: calc(var(--body-padding) * -1);
+    margin-right: calc(var(--body-padding) * -1);
+  }
+  .work .project .description {
+    padding-left: 0;
+  }
+}

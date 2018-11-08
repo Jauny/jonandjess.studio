@@ -12,6 +12,7 @@
 
   --section-gutter: 135px;
   --header-height: 70px;
+  --body-padding: 10px;
 }
 
 /* colors */
@@ -68,10 +69,9 @@ body {
 .container {
   max-width: 956px;
   margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: var(--body-padding);
+  padding-right: var(--body-padding);
 }
-
 
 /* nav */
 .nav {
@@ -196,20 +196,4 @@ button:hover {
   button {
     width: 100%;
   }
-}
-
-/* work */
-.work .project {
-  display: flex;
-  margin-top: 30px;
-}
-.work .project .picture {
-  flex: 2;
-}
-.work .project .picture img {
-  width: 100%;
-}
-.work .project .description {
-  flex: 1;
-  padding-left: 30px;
 }
