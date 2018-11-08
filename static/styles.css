@@ -85,8 +85,12 @@ body {
   text-align: right;
 }
 .nav ul li {
-  display: inline;
+  display: inline-block;
   margin-left: 10px;
+  transition: all .3s;
+}
+.nav ul li:hover {
+  transform: translateY(-1px);
 }
 .nav ul li a {
   color: inherit;
@@ -179,9 +183,12 @@ button {
   font-weight: bold;
   font-size: 12px;
   cursor: pointer;
+  transition: all .3s;
 }
 button:hover {
   opacity: 0.8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1);
 }
 
 /* index */
