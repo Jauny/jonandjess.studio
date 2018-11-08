@@ -107,7 +107,7 @@
     const checkmarksTop = checkmarks[0].getBoundingClientRect().top
     if (window.innerHeight - checkmarksTop > 100) {
       checkmarks.forEach(el => {
-        el.style.paddingTop = 0
+        el.style.transform = 'translateY(0)'
         el.style.opacity = 100
       })
     }

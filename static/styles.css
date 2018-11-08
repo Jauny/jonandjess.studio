@@ -66,9 +66,10 @@ body {
   margin: 0;
 }
 .container {
-  width: 100%;
   max-width: 956px;
   margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
@@ -178,126 +179,23 @@ button {
   border: none;
   color: var(--white);
   margin-left: auto;
+  margin-top: 30px;
   text-transform: uppercase;
   font-family: var(--sans-serif);
   font-weight: bold;
   font-size: 12px;
   cursor: pointer;
-  transition: all .3s;
+  transition: transform .3s;
 }
 button:hover {
   opacity: 0.8;
   transform: translateY(-1px);
   box-shadow: 0 7px 14px rgba(50,50,93,.1);
 }
-
-/* index */
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - var(--header-height));
-}
-.logo img {
-  width: 353px;
-  max-width: 100%;
-}
-.scrollarrow {
-  position: absolute;
-  bottom: calc(var(--header-height) / 2);
-  left: calc(50% - 10px);
-  height: 20px;
-  width: 20px;
-  transform: rotate(45deg);
-  border: 1px solid black;
-  border-top: none;
-  border-left: none;
-  transition: opacity .5s;
-}
-
-.who {
-  text-align: center;
-}
-
-.us {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--section-gutter);
-}
-.us .one {
-  font-size: 15px;
-  text-align: left;
-  flex: 0 0 45%;
-}
-.us .one .shot {
-  text-align: center;
-  border-radius: 50%;
-  width: 132px;
-  height: 132px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  position: relative;
-  background-size: cover;
-}
-.us .one .shot.him {
-  background-image: url("him.png");
-}
-.us .one .shot.her {
-  background-image: url("her.png");
-}
-.us .one .shot .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.him .overlay {
-  background-color: var(--blue);
-}
-.her .overlay {
-  background-color: var(--red);
-}
-
-.capabilities {
-  margin-top: var(--section-gutter);
-}
-.capabilities .skills {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  height: 90px;
-}
-.capabilities .skill {
-  padding-top: 20px;
-  opacity: 0;
-  transition: all 1s;
-}
-.capabilities .skill img {
-  width: 50%;
-}
-
-.testimonials {
-  margin-top: var(--section-gutter);
-  background-color: var(--darkGrey);
-  color: var(--white);
-  padding: var(--header-height) 0;
-  font-size: 18px;
-  font-weight: 500;
-}
-.testimonials .name {
-  font-family: var(--sans-serif);
-  text-align: right;
-}
-.testimonials .title {
-  font-style: italic;
-  text-align: right;
-}
-
-.contact {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: var(--header-height);
+@media only screen and (max-width: 768px) {
+  button {
+    width: 100%;
+  }
 }
 
 /* contact */

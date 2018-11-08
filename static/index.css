@@ -1,0 +1,124 @@
+/* index */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-height));
+}
+.logo img {
+  width: 353px;
+  max-width: 100%;
+}
+.scrollarrow {
+  position: absolute;
+  bottom: calc(var(--header-height) / 2);
+  left: calc(50% - 10px);
+  height: 20px;
+  width: 20px;
+  transform: rotate(45deg);
+  border: 1px solid black;
+  border-top: none;
+  border-left: none;
+  transition: opacity .5s;
+}
+
+.who {
+  text-align: center;
+}
+
+.us {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--section-gutter);
+}
+@media only screen and (max-width: 768px) {
+  .us {
+    flex-direction: column-reverse;
+  }
+  .us .linkedin img {
+    width: 30px;
+  }
+}
+.us .one {
+  font-size: 15px;
+  text-align: left;
+  flex: 0 0 45%;
+}
+.us .one .shot {
+  text-align: center;
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+}
+.us .one .shot.him {
+  background-image: url("him.png");
+}
+.us .one .shot.her {
+  background-image: url("her.png");
+}
+.us .one .shot .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.him .overlay {
+  background-color: var(--blue);
+}
+.her .overlay {
+  background-color: var(--red);
+}
+
+.capabilities {
+  margin-top: var(--section-gutter);
+}
+.capabilities .skills {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .capabilities .skills {
+    flex-wrap: wrap;
+  }
+  .capabilities .skills .skill {
+    flex-basis: 50%;
+  }
+}
+.capabilities .skill {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 1s;
+}
+.capabilities .skill img {
+  width: 50%;
+}
+
+.testimonials {
+  margin-top: var(--section-gutter);
+  background-color: var(--darkGrey);
+  color: var(--white);
+  padding-top: var(--header-height);
+  padding-bottom: var(--header-height);
+  font-size: 18px;
+  font-weight: 500;
+}
+.testimonials .name {
+  font-family: var(--sans-serif);
+  text-align: right;
+}
+.testimonials .title {
+  font-style: italic;
+  text-align: right;
+}
+
+.contact {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--header-height);
+}
