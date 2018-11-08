@@ -213,35 +213,6 @@ button:hover {
   margin-left: auto;
 }
 
-/* about */
-.about-page .heading {
-  margin-top: var(--header-height);
-  margin-bottom: var(--section-gutter);
-}
-.about-page .thing {
-  display: flex;
-  margin-bottom: var(--section-gutter);
-}
-.about-page .thing div {
-  flex: 1;
-}
-.about-page .thing .picture img {
-  width: 100%;
-}
-
-.about-page .work-with-us {
-  width: 100%;
-  padding: var(--header-height) 0;
-  background-color: var(--white);
-} 
-.about-page .work-with-us .inner {
-  padding-right: 15%;
-}
-.about-page .work-with-us button {
-  width: 250px;
-  margin-left: 0;
-}
-
 /* work */
 .work .project {
   display: flex;
