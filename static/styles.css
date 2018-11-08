@@ -198,21 +198,6 @@ button:hover {
   }
 }
 
-/* contact */
-.contact-page {
-  display: flex;
-  justify-content: space-between;
-}
-.contact-page .contact {
-  flex: 1;
-}
-.contact-page .us {
-  flex: 1;
-}
-.contact-page .us img {
-  margin-left: auto;
-}
-
 /* work */
 .work .project {
   display: flex;

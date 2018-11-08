@@ -1,0 +1,22 @@
+/* contact */
+.contact-page {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+  }
+  .contact-page .contact {
+    margin-bottom: var(--section-gutter);
+  }
+}
+.contact-page .contact {
+  flex: 1;
+}
+.contact-page .us {
+  flex: 1;
+}
+.contact-page .us img {
+  margin-left: auto;
+}
