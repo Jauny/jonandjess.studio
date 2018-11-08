@@ -1,7 +1,8 @@
 .nav
   %a#header-logo{:href => "index.html", :style => "#{active == 'index' ? 'visibility: hidden' : ''}"}
     %img{:src => "static/logotype.svg"}
-  %ul
+
+  %ul{:id => 'nav'}
     %li
       %a{:class => "#{active == 'about' ? 'active' : ''}" , :href => "about.html"} about
     %li
@@ -10,3 +11,22 @@
       %a{:class => "#{active == 'contact' ? 'active' : ''}" , :href => "contact.html"} contact
     %li
       %a{:class => "#{active == 'styleguide' ? 'active' : ''}" , :href => "styleguide.html"} styleguide
+    %img{:src => "static/mobilenavclose.svg", :id => 'nav-close'}
+
+  .mobile-nav-link
+    %img{:src => "static/mobilenav.svg", :id => 'nav-open'}
+
+:javascript 
+  const navOpen = document.getElementById('nav-open')
+  const navClose = document.getElementById('nav-close')
+  const nav = document.getElementById('nav')
+  console.log(navOpen, navClose, nav)
+
+  navOpen.onclick = function() {
+    console.log('click')
+    nav.style.display = 'block';
+  }
+  navClose.onclick = function() {
+    nav.style.display = 'none';
+  }
+  
