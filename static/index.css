@@ -74,7 +74,7 @@
 }
 
 .capabilities {
-  margin-top: var(--section-gutter);
+  margin: var(--section-gutter) 0;
 }
 .capabilities .skills {
   display: flex;
@@ -82,11 +82,16 @@
   text-align: center;
 }
 @media only screen and (max-width: 768px) {
+  .capabilities {
+    margin: var(--section-gutter) 0 0;
+  }
   .capabilities .skills {
     flex-wrap: wrap;
+    padding: calc(var(--section-gutter) / 2) 0;
   }
   .capabilities .skills .skill {
     flex-basis: 50%;
+    margin-bottom: 50px;
   }
 }
 .capabilities .skill {
@@ -99,7 +104,6 @@
 }
 
 .testimonials {
-  margin-top: var(--section-gutter);
   background-color: var(--darkGrey);
   color: var(--white);
   padding-top: var(--header-height);
