@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 92px;
+  margin-bottom: var(--section-gutter);
 }
 .contact-page .contact {
   width: 460px;
