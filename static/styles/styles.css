@@ -62,12 +62,12 @@ h6, .nav, .footer {
 body {
   background-color: var(--bg-color);
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 16px;
   color: var(--darkGrey);
   margin: 0;
 }
 .container {
-  max-width: 956px;
+  max-width: 942px;
   margin: auto;
   padding-left: var(--body-padding);
   padding-right: var(--body-padding);
@@ -78,7 +78,6 @@ body {
   background-color: var(--darkGrey);
   color: var(--white);
   padding-top: 40px;
-  margin-top: var(--header-height);
 }
 .footer .container {
   display: flex;
@@ -89,7 +88,7 @@ body {
   padding-left: 0px;
 }
 .footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .footer ul li a {
   color: inherit;

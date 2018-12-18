@@ -1,23 +1,22 @@
 /* about */
 .about-page .heading {
+  width: 100%;
+  max-width: 813px;
   margin-top: var(--header-height);
   margin-bottom: var(--section-gutter);
 }
 .about-page .thing {
   display: flex;
-  margin-bottom: var(--section-gutter);
-}
-@media only screen and (max-width: 768px) {
-  .about-page .thing {
-    flex-direction: column-reverse;
-    margin-bottom: calc(var(--section-gutter) / 2);
-  }
+  margin-bottom: calc(var(--section-gutter) / 2);
 }
 .about-page .thing div {
   flex: 1;
 }
 .about-page .thing .picture img {
   width: 100%;
+}
+.about-page .thing .text {
+  padding-right: 150px;
 }
 
 .about-page .work-with-us {
@@ -26,9 +25,15 @@
   background-color: var(--white);
 } 
 .about-page .work-with-us .inner {
-  padding-right: 15%;
+  padding-right: 30px;
 }
 @media only screen and (max-width: 768px) {
+  .about-page .thing {
+    flex-direction: column-reverse;
+  }
+  .about-page .thing .text {
+    padding-right: 0;
+  }
   .about-page .work-with-us .inner {
     padding-right: 0;
   }
