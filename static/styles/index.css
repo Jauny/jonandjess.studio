@@ -24,23 +24,33 @@
 
 .who {
   text-align: center;
+  width: 697px;
+  margin: auto;
+}
+@media only screen and (max-width: 768px) {
+  .who {
+    width: 100%;
+  }
 }
 
 .us {
+  width: 728px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
   margin-top: var(--section-gutter);
 }
 @media only screen and (max-width: 768px) {
   .us {
     flex-direction: column-reverse;
+    width: 100%;
   }
   .us .linkedin img {
     width: 30px;
   }
 }
 .us .one {
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
   flex: 0 0 45%;
 }
@@ -77,9 +87,18 @@
   margin: var(--section-gutter) 0;
 }
 .capabilities .skills {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   text-align: center;
+}
+.capabilities .skill {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 1s;
+}
+.capabilities .skill img {
+  width: 72px;
 }
 @media only screen and (max-width: 768px) {
   .capabilities {
@@ -93,14 +112,9 @@
     flex-basis: 50%;
     margin-bottom: 50px;
   }
-}
-.capabilities .skill {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 1s;
-}
-.capabilities .skill img {
-  width: 50%;
+  .capabilities .skill img {
+    width: 50%;
+  }
 }
 
 .testimonials {
@@ -121,8 +135,13 @@
 }
 
 .contact {
-  width: 75%;
+  width: 460px;
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--header-height);
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    width: 100%;
+  }
 }

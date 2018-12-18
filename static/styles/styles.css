@@ -125,6 +125,7 @@ form {
 }
 input, textarea {
   margin-top: 20px;
+  margin-bottom: 10px;
   width: 100%;
   font-family: var(--serif);
   font-size: 16px;
@@ -147,7 +148,7 @@ textarea {
 button {
   height: 56px;
   background-color: var(--red);
-  width: 50%;
+  width: 274px;
   border: none;
   color: var(--white);
   margin-left: auto;
