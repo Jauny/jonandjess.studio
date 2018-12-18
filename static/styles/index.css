@@ -56,10 +56,10 @@
   background-size: cover;
 }
 .us .one .shot.him {
-  background-image: url("him.png");
+  background-image: url("../him.png");
 }
 .us .one .shot.her {
-  background-image: url("her.png");
+  background-image: url("../her.png");
 }
 .us .one .shot .overlay {
   position: absolute;

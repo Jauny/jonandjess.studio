@@ -2,7 +2,8 @@
   .logo
     %img{:src => "static/logotype.svg"}
 
-  .scrollarrow#scrollarrow
+  #scrollarrow-container
+    .scrollarrow#scrollarrow
 
   .who
     %h5 who we are
@@ -115,7 +116,7 @@
 
   // scrollarrow animation
   const arrow = document.getElementById('scrollarrow')
-  const arrowAnimation = () => {
+  const arrowFading = () => {
     const wih = window.innerHeight
     const arrowBottom = arrow.getBoundingClientRect().bottom
     if (wih - arrowBottom > 50) {
@@ -124,9 +125,11 @@
       arrow.style.opacity = 100
     }
   }
+  const arrowAnimation = () => {
+  }
 
   window.addEventListener('scroll', (e) => {
     animatePictures()
     checkmarksAnimations()
-    arrowAnimation()
+    arrowFading()
   })
