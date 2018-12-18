@@ -129,6 +129,9 @@ input, textarea {
   font-family: var(--serif);
   font-size: 16px;
 }
+textarea {
+  margin-top: 40px;
+}
 input:focus, textarea:focus {
   outline: none;
 }
