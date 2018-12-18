@@ -12,8 +12,10 @@
 .about-page .thing div {
   flex: 1;
 }
-.about-page .thing .picture img {
-  width: 100%;
+.about-page .thing .picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-page .thing .text {
   padding-right: 150px;
