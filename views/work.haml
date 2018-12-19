@@ -1,8 +1,13 @@
 .work
   .container
     .project
-      .picture
-        %img{:src => "static/kali.png"}
+      .picture.siema
+        .pane
+          %img{:src => "static/kali.png"}
+        .pane
+          %img{:src => "static/kali.png"}
+        .pane
+          %img{:src => "static/kali.png"}
       .description
         %h1 Bird
         %h5 Launch Essentials 
@@ -97,7 +102,10 @@
         %p Jon&Jess teamed up with The Aster Group to develop visual language for their investment firm clientele, including Moving Capital, the Uber alumni investor syndicate founded by Josh Mohrer and William Barnes.
 
 
+%script{:src => "static/js/siema.min.js"}
 :javascript 
+  new Siema()
+
   const wih = window.innerHeight
   const projects = Array.from(document.getElementsByClassName('project'))
   projects.forEach(project => {
