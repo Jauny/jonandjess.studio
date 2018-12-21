@@ -31,3 +31,14 @@
         %h1 Kali
         %h5 branding
         %p We solve business problems through design, storytelling and code. Our founders met in 2014 while working on the Growth Team at Uber and have since teamed up to help other companies build their products, grow their brands, and inspire their customers.
+
+:javascript 
+  const wih = window.innerHeight
+  const projects = Array.from(document.getElementsByClassName('project'))
+  projects.forEach(project => {
+    const text = project.lastElementChild
+    appear(text, wih)
+    window.addEventListener('scroll', () => {
+      appear(text, wih)
+    })
+  })

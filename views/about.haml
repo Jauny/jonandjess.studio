@@ -51,16 +51,15 @@
           %button say hey
 
 :javascript 
-  const wih = window.innerHeight
+  const wih = window.innerHeight / 2
   const things = Array.from(document.getElementsByClassName('thing'))
-  console.log(things)
   things.forEach(thing => {
     const left = thing.firstElementChild 
     const right = thing.lastElementChild
-    scrollStrafing(left, -30, 0, wih)
-    scrollStrafing(right, 30, 0, wih)
+    scrollStrafing(left, -15, 0, wih)
+    scrollStrafing(right, 15, 0, wih)
     window.addEventListener('scroll', () => {
-      scrollStrafing(left, -30, 0, wih)
-      scrollStrafing(right, 30, 0, wih)
+      scrollStrafing(left, -15, 0, wih)
+      scrollStrafing(right, 15, 0, wih)
     })
   })
