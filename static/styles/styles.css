@@ -131,6 +131,7 @@ input, textarea {
 }
 textarea {
   margin-top: 40px;
+  padding: 5px 10px;
 }
 input:focus, textarea:focus {
   outline: none;
