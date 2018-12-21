@@ -83,49 +83,9 @@
   = partial :contact
 
 :javascript 
-  const scrollScale = function(el, maxScale, range, direction) {
-    const elTop = el.getBoundingClientRect().top
-    const factor = (range - elTop) / range
-    
-    let scale
-    switch(direction) {
-      case 'up':
-        scale = 1 + (maxScale * factor)
-        scale = Math.min(Math.max(1, scale), 1 + maxScale)
-        break
-
-      case 'down':
-        scale = 1 - (maxScale * factor)
-        scale = Math.min(1, Math.max(1 - maxScale, scale))
-        break
-    }
-
-    el.style.transform = `scale(${scale})`
-  }
-
-  const scrollStrafing = function(el, maxScale, range, direction) {
-    const elTop = el.getBoundingClientRect().top
-    const factor = (range - elTop) / range
-    
-    let scale 
-    switch(direction) {
-      case 'right':
-        scale = -maxScale + (maxScale * factor)
-        scale = Math.min(0, Math.max(scale, -maxScale))
-        break
-      case 'left':
-        scale = maxScale - (maxScale * factor)
-        scale = Math.max(0, Math.min(scale, maxScale))
-        break
-    }
-
-    el.style.transform = `translateX(${scale}px)`
-  }
-
   // his and hers picture animation
   const hisPicture = document.getElementsByClassName('shot him')[0]
   const herPicture = document.getElementsByClassName('shot her')[0]
-
   const animatePictures = () => {
     const wih = window.innerHeight / 2
 
@@ -168,33 +128,32 @@
   }
 
   const wih = window.innerHeight
-
   // scroll scale the logo
   const logo = document.getElementById('logo-container')
-  scrollScale(logo, 0.2, wih, 'down')
+  scrollScale(logo, 1, 0.8, wih)
 
   // scroll scale who we are
   const who = document.getElementsByClassName('who')[0]
   scrollScale(who, 0.2, wih, 'up')
 
-  // scroll straf her
+  // scroll straf him
   const him = document.getElementsByClassName('us')[0].firstElementChild
-  scrollStrafing(him, 30, wih, 'right')
+  scrollStrafing(him, -30, 0, wih)
 
   // scroll straf her
   const her = document.getElementsByClassName('us')[0].lastElementChild
-  scrollStrafing(her, 30, wih, 'left')
+  scrollStrafing(her, 30, 0, wih)
 
   // scroll scale contact
   const contact = document.getElementsByClassName('container-contact')[0]
-  scrollScale(contact, 0.2, wih, 'up')
+  scrollScale(contact, 0.8, 1, wih)
 
   window.addEventListener('scroll', (e) => {
-    scrollScale(logo, 0.2, wih, 'down')
-    scrollScale(who, 0.2, wih, 'up')
-    scrollStrafing(him, 30, wih, 'right')
-    scrollStrafing(her, 30, wih, 'left')
-    scrollScale(contact, 0.2, wih, 'up')
+    scrollScale(logo, 1, 0.8, wih)
+    scrollScale(who, 0.8, 1, wih)
+    scrollStrafing(him, -30, 0, wih)
+    scrollStrafing(her, 30, 0, wih)
+    scrollScale(contact, 0.8, 1, wih)
     animatePictures()
     checkmarksAnimations()
     arrowFading()

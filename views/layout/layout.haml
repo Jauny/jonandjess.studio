@@ -1,10 +1,11 @@
 !!! 5
 %html
   %head
-    %link{:rel => :stylesheet, :type => :"text/css", :href => "static/styles/styles.css"}
-    %link{:rel => :stylesheet, :type => :"text/css", :href => "static/styles/nav.css"}
-    %link{:rel => :stylesheet, :type => :"text/css", :href => "static/styles/#{active}.css"}
-    %link{:rel => :stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Montserrat:500,700"}
+    %link{:rel => :stylesheet, :type => "text/css", :href => "static/styles/styles.css"}
+    %link{:rel => :stylesheet, :type => "text/css", :href => "static/styles/nav.css"}
+    %link{:rel => :stylesheet, :type => "text/css", :href => "static/styles/#{active}.css"}
+    %link{:rel => :stylesheet, :type => "text/css", :href => "https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Montserrat:500,700"}
+    %script{:src => "static/js/scroll.js"}
   %body
     .container
       = partial :nav, :active => active
