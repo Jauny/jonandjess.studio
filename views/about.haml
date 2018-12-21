@@ -11,7 +11,7 @@
           %img{:src => "static/Tandem.svg"}
         .text 
           %h1 We help fast-growing companies run faster.
-          %p Our founders met at the fastest growing company in history. We understand that growth, scalability, and product iteration are hard.
+          %p Our founders met at the fastest growing company in history. We understand the challenges that come with rapid growth, scalability, and product iteration.
 
       .thing
         .picture
@@ -49,3 +49,18 @@
         %h1 See us as an extension of your team. Work with Jon. Work with Jess. Work with Jon and Jess. Work with Jon and Jess and a hand-picked strike team. 
         %form{:action => "contact.html"}
           %button say hey
+
+:javascript 
+  const wih = window.innerHeight
+  const things = Array.from(document.getElementsByClassName('thing'))
+  console.log(things)
+  things.forEach(thing => {
+    const left = thing.firstElementChild 
+    const right = thing.lastElementChild
+    scrollStrafing(left, -30, 0, wih)
+    scrollStrafing(right, 30, 0, wih)
+    window.addEventListener('scroll', () => {
+      scrollStrafing(left, -30, 0, wih)
+      scrollStrafing(right, 30, 0, wih)
+    })
+  })
