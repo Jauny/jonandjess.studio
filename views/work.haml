@@ -2,18 +2,9 @@
   .container
     .project
       .picture
-        .controls
-          .left
-            <
-          .right
-            >
-        .siema
-          .pane
-            %img{:src => "static/kali.png"}
-          .pane
-            %img{:src => "static/kali.png"}
-          .pane
-            %img{:src => "static/kali.png"}
+        %img{:src => "static/kali.png"}
+        %img{:src => "static/kali.png"}
+        %img{:src => "static/kali.png"}
       .description
         %h1 Bird
         %h5 Launch Essentials 
@@ -29,7 +20,9 @@
 
     .project
       .picture
-        %img{:src => "static/nikefree.png"}
+        %img{:src => "static/Nike_1.png"}
+        %img{:src => "static/Nike_2.png"}
+        %img{:src => "static/Nike_3.png"}
       .description
         %h1 Nike
         %h5 Run Super Natural
@@ -46,6 +39,8 @@
     .project
       .picture
         %img{:src => "static/kali.png"}
+        %img{:src => "static/kali_2.jpg"}
+        %img{:src => "static/kali_3.jpg"}
       .description
         %h1 Kali
         %h5 Making Cannabis Luxe
@@ -54,6 +49,7 @@
     .project
       .picture
         %img{:src => "static/Angelic_1.png"}
+        %img{:src => "static/Angelic_2.png"}
       .description
         %h1 Angelic Bakehouse
         %h5 A Seamless Customer Journey
@@ -62,6 +58,7 @@
     .project
       .picture
         %img{:src => "static/Benderstrasse_1.png"}
+        %img{:src => "static/Benderstrasse_2.png"}
       .description
         %h1 Benderstrasse
         %h5 A Clean New Look
@@ -70,6 +67,8 @@
     .project
       .picture
         %img{:src => "static/Wedding_1.png"}
+        %img{:src => "static/Wedding_2.png"}
+        %img{:src => "static/Wedding_3.png"}
       .description
         %h1 Jon&Jess
         %h5 Yes, We’re Married
@@ -78,6 +77,8 @@
     .project
       .picture
         %img{:src => "static/Tavosa_1.png"}
+        %img{:src => "static/Tavosa_2.png"}
+        %img{:src => "static/Tavosa_3.png"}
       .description
         %h1 Tavosa
         %h5 A New World Wine Label
@@ -94,6 +95,7 @@
     .project
       .picture
         %img{:src => "static/SixthStar_1.png"}
+        %img{:src => "static/SixthStar_2.png"}
       .description
         %h1 Uber
         %h5 Sixth Star Award
@@ -110,8 +112,6 @@
 
 %script{:src => "static/js/siema.min.js"}
 :javascript 
-  var siema = new Siema()
-
   const wih = window.innerHeight
   const projects = Array.from(document.getElementsByClassName('project'))
   projects.forEach(project => {
@@ -120,4 +120,12 @@
     window.addEventListener('scroll', () => {
       appear(text, wih)
     })
+
+    const pictures = project.firstElementChild
+    if (pictures.children.length > 1) {
+      new Siema({
+        selector: pictures,
+        loop: true
+      })
+    }
   })
