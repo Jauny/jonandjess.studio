@@ -14,6 +14,12 @@
 }
 .work .project .picture {
   flex: 2;
+  overflow: hidden;
+}
+.work .project .picture .controls {
+  position: absolute;
+  font-size: 85px;
+  z-index: 1;
 }
 .work .project .picture img {
   width: 100%;

@@ -1,13 +1,19 @@
 .work
   .container
     .project
-      .picture.siema
-        .pane
-          %img{:src => "static/kali.png"}
-        .pane
-          %img{:src => "static/kali.png"}
-        .pane
-          %img{:src => "static/kali.png"}
+      .picture
+        .controls
+          .left
+            <
+          .right
+            >
+        .siema
+          .pane
+            %img{:src => "static/kali.png"}
+          .pane
+            %img{:src => "static/kali.png"}
+          .pane
+            %img{:src => "static/kali.png"}
       .description
         %h1 Bird
         %h5 Launch Essentials 
@@ -104,7 +110,7 @@
 
 %script{:src => "static/js/siema.min.js"}
 :javascript 
-  new Siema()
+  var siema = new Siema()
 
   const wih = window.innerHeight
   const projects = Array.from(document.getElementsByClassName('project'))
