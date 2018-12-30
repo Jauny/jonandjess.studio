@@ -72,10 +72,15 @@
     %h1 Jon&Jess has been an invaluable partner as Bird set out to launch and grow our EMEA market. They understand the value of speed, quality, and flexibility when it comes to working with hyper-growth companies.
     .name Jan De Wulf 
     .title Head of EMEA Brand, Bird
+  .container
+    %h1 When it comes to branding, design and web development projects for my clients, Jon and Jess Studio are consistently my collaborator of choice. I couldn't think of a team that better understands my needs, ambitions and aesthetic. They've become a true partner to me and my business. 
+    .name Eva Baczynska 
+    .title Founder, The Aster Group
 
 .container.container-contact
   = partial :contact
 
+%script{:src => "static/js/siema.min.js"}
 :javascript 
   // his and hers picture animation
   const hisPicture = document.getElementsByClassName('shot him')[0]
@@ -157,4 +162,11 @@
     checkmarksAnimations()
     contactAnimation()
     arrowFading()
+  })
+
+  // carousel on testimonials
+  const tests = document.getElementsByClassName('testimonials')[0]
+  new Siema({
+    selector: tests,
+    loop: true
   })
