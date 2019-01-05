@@ -43,15 +43,6 @@
   margin: auto;
   margin-top: var(--section-gutter);
 }
-@media only screen and (max-width: 768px) {
-  .us {
-    flex-direction: column-reverse;
-    width: 100%;
-  }
-  .us .linkedin img {
-    width: 30px;
-  }
-}
 .us .one {
   font-size: 16px;
   text-align: left;
@@ -84,6 +75,18 @@
 }
 .her .overlay {
   background-color: var(--red);
+}
+@media only screen and (max-width: 768px) {
+  .us {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .us .linkedin img {
+    width: 30px;
+  }
+  .us .one .shot.him {
+    margin-top: var(--section-gutter);
+  }
 }
 
 .capabilities {
