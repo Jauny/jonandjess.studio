@@ -39,6 +39,12 @@
   .about-page .work-with-us .inner {
     padding-right: 0;
   }
+  .about-page .thing .picture {
+    justify-content: flex-end;
+  }
+  .about-page .thing .picture img {
+    width: 100%;
+  }
 }
 .about-page .work-with-us button {
   margin-left: 0;
