@@ -135,14 +135,6 @@
   const who = document.getElementsByClassName('who')[0]
   scrollScale(who, 0.2, wih, 'up')
 
-  // scroll straf him
-  const him = document.getElementsByClassName('us')[0].firstElementChild
-  scrollStrafing(him, -30, 0, wih)
-
-  // scroll straf her
-  const her = document.getElementsByClassName('us')[0].lastElementChild
-  scrollStrafing(her, 30, 0, wih)
-
   // contact appear
   const contactAnimation = () => {
     const contact = document.getElementsByClassName('contact')[0]
@@ -154,10 +146,15 @@
   }
 
   window.addEventListener('scroll', (e) => {
+    if (window.innerWidht > 768) {
+      // scroll straf him and her
+      const him = document.getElementsByClassName('us')[0].firstElementChild
+      const her = document.getElementsByClassName('us')[0].lastElementChild
+      scrollStrafing(him, -30, 0, wih)
+      scrollStrafing(her, 30, 0, wih)
+    }
     scrollScale(logo, 1, 0.8, wih)
     scrollScale(who, 0.8, 1, wih)
-    scrollStrafing(him, -30, 0, wih)
-    scrollStrafing(her, 30, 0, wih)
     animatePictures()
     checkmarksAnimations()
     contactAnimation()
