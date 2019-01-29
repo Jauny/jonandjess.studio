@@ -1,7 +1,7 @@
 /* about */
 .about-page .heading {
   width: 100%;
-  max-width: 813px;
+  text-align: center;
   margin-top: var(--header-height);
   margin-bottom: var(--section-gutter);
 }
