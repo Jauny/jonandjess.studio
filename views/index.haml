@@ -68,14 +68,18 @@
         %h5 content production
 
 .testimonials
-  .container
-    %h1 Jon&Jess has been an invaluable partner as Bird set out to launch and grow our EMEA market. They understand the value of speed, quality, and flexibility when it comes to working with hyper-growth companies.
-    .name Jan De Wulf 
-    .title Head of EMEA Brand, Bird
-  .container
-    %h1 When it comes to branding, design and web development projects for my clients, Jon and Jess Studio are consistently my collaborator of choice. I couldn't think of a team that better understands my needs, ambitions and aesthetic. They've become a true partner to me and my business. 
-    .name Eva Baczynska 
-    .title Founder, The Aster Group
+  .carousel
+    .container
+      %h1 Jon&Jess has been an invaluable partner as Bird set out to launch and grow our EMEA market. They understand the value of speed, quality, and flexibility when it comes to working with hyper-growth companies.
+      .name Jan De Wulf 
+      .title Head of EMEA Brand, Bird
+    .container
+      %h1 When it comes to branding, design and web development projects for my clients, Jon and Jess Studio are consistently my collaborator of choice. I couldn't think of a team that better understands my needs, ambitions and aesthetic. They've become a true partner to me and my business. 
+      .name Eva Baczynska 
+      .title Founder, The Aster Group
+  .dots
+    .dot.active
+    .dot
 
 .container.container-contact
   = partial :contact
@@ -162,8 +166,25 @@
   })
 
   // carousel on testimonials
-  const tests = document.getElementsByClassName('testimonials')[0]
-  new Siema({
-    selector: tests,
-    loop: true
+  const hightlightDots = (dots, activeIndex) => {
+    for (let i = 0; i < dots.length; i++) {
+      if (i === activeIndex) {
+        dots[i].classList.add('active')
+      } else {
+        dots[i].classList.remove('active')
+      }
+    }
+  }
+  const carousel = document.querySelector('.carousel')
+  const dots = document.querySelector('.dots').children
+  const siema = new Siema({
+    selector: carousel,
+    loop: true,
+    onChange: function() {
+      hightlightDots(dots, this.currentSlide)
+    }
   })
+  // dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener('click', () => siema.goTo(i))
+  }

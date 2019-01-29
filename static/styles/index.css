@@ -124,6 +124,7 @@
 }
 
 .testimonials {
+  position: relative;
   background-color: var(--darkGrey);
   color: var(--white);
   padding-top: var(--header-height);
@@ -138,6 +139,27 @@
 .testimonials .title {
   font-style: italic;
   text-align: right;
+}
+.dots {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.dots .dot {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+.dot:not(:last-child) {
+  margin-right: 10px;
+}
+.dots .dot.active {
+  background-color: var(--gold);
 }
 
 .contact {
