@@ -11,11 +11,62 @@
 .work .project {
   display: flex;
   margin-top: 30px;
+  position: relative;
 }
 .work .project .picture {
   flex: 2;
   overflow: hidden;
+  position: relative;
 }
+.work .project .left {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 10%;
+  height: 100%;
+  padding: 0 5%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.work .project .left img{
+  transform: rotate(180deg);
+}
+.work .project .right {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  padding: 0 5%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.work .project .dots {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.work .project .dots .dot {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+.dot:not(:last-child) {
+  margin-right: 10px;
+}
+.work .project .dots .dot.active {
+  background-color: var(--gold);
+}
+
 .work .project .picture .controls {
   position: absolute;
   font-size: 85px;
@@ -34,6 +85,9 @@
 @media only screen and (max-width: 768px) {
   .work .project {
     flex-direction: column-reverse;
+  }
+  .work .project .left, .work .project .right {
+    display: none;
   }
   .work .project .picture {
     margin-left: calc(var(--body-padding) * -1);

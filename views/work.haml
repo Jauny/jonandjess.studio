@@ -2,9 +2,18 @@
   .container
     .project
       .picture
-        %img{:src => "static/Bird_1.png"}
-        %img{:src => "static/Bird_2.png"}
-        %img{:src => "static/Bird_3.png"}
+        .carousel
+          %img{:src => "static/Bird_1.png"}
+          %img{:src => "static/Bird_2.png"}
+          %img{:src => "static/Bird_3.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
       .description
         %h1 Bird
         %h5 Launch Essentials 
@@ -20,9 +29,18 @@
 
     .project
       .picture
-        %img{:src => "static/Nike_1.png"}
-        %img{:src => "static/Nike_2.png"}
-        %img{:src => "static/Nike_3.png"}
+        .carousel
+          %img{:src => "static/Nike_1.png"}
+          %img{:src => "static/Nike_2.png"}
+          %img{:src => "static/Nike_3.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
       .description
         %h1 Nike
         %h5 Run Super Natural
@@ -38,9 +56,18 @@
 
     .project
       .picture
-        %img{:src => "static/kali_3.jpg"}
-        %img{:src => "static/kali.png"}
-        %img{:src => "static/kali_2.jpg"}
+        .carousel
+          %img{:src => "static/kali_3.jpg"}
+          %img{:src => "static/kali.png"}
+          %img{:src => "static/kali_2.jpg"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
       .description
         %h1 Kali
         %h5 Making Cannabis Luxe
@@ -48,8 +75,16 @@
 
     .project
       .picture
-        %img{:src => "static/SixthStar_1.png"}
-        %img{:src => "static/SixthStar_2.png"}
+        .carousel
+          %img{:src => "static/SixthStar_1.png"}
+          %img{:src => "static/SixthStar_2.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
       .description
         %h1 Uber
         %h5 Sixth Star Award
@@ -57,9 +92,18 @@
 
     .project
       .picture
-        %img{:src => "static/JoeSchmoe_1.png"}
-        %img{:src => "static/JoeSchmoe_2.png"}
-        %img{:src => "static/JoeSchmoe_3.png"}
+        .carousel
+          %img{:src => "static/JoeSchmoe_1.png"}
+          %img{:src => "static/JoeSchmoe_2.png"}
+          %img{:src => "static/JoeSchmoe_3.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
       .description
         %h1 Joe Schmoe
         %h5 A Collection of Colorful Characters
@@ -67,8 +111,16 @@
 
     .project
       .picture
-        %img{:src => "static/Benderstrasse_1.png"}
-        %img{:src => "static/Benderstrasse_2.png"}
+        .carousel
+          %img{:src => "static/Benderstrasse_1.png"}
+          %img{:src => "static/Benderstrasse_2.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
       .description
         %h1 Benderstrasse
         %h5 A State of the Art Dental Practice
@@ -76,9 +128,19 @@
 
     .project
       .picture
-        %img{:src => "static/Angelic_1.png"}
-        %img{:src => "static/Angelic_2.png"}
-        %img{:src => "static/Angelic_3.png"}
+        .carousel
+          %img{:src => "static/Angelic_1.png"}
+          %img{:src => "static/Angelic_2.png"}
+          %img{:src => "static/Angelic_3.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
+          .dot
       .description
         %h1 Angelic Bakehouse
         %h5 A Seamless Customer Journey
@@ -86,9 +148,18 @@
 
     .project
       .picture
-        %img{:src => "static/Tavosa_3.png"}
-        %img{:src => "static/Tavosa_1.png"}
-        %img{:src => "static/Tavosa_2.png"}
+        .carousel
+          %img{:src => "static/Tavosa_3.png"}
+          %img{:src => "static/Tavosa_1.png"}
+          %img{:src => "static/Tavosa_2.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
+          .dot
       .description
         %h1 Tavosa
         %h5 A New World Wine Label
@@ -96,8 +167,16 @@
 
     .project
       .picture
-        %img{:src => "static/TheAsterGroup_1.png"}
-        %img{:src => "static/TheAsterGroup_2.png"}
+        .carousel
+          %img{:src => "static/TheAsterGroup_1.png"}
+          %img{:src => "static/TheAsterGroup_2.png"}
+        .left
+          %img{:src => "static/arrow.svg"}
+        .right
+          %img{:src => "static/arrow.svg"}
+        .dots
+          .dot.active
+          .dot
       .description
         %h1 The Aster Group
         %h5 Forward-Thinking Investment Firms
@@ -109,17 +188,46 @@
   const wih = window.innerHeight
   const projects = Array.from(document.getElementsByClassName('project'))
   projects.forEach(project => {
-    const text = project.lastElementChild
+    const text = project.querySelector('.description')
     appear(text, wih)
     window.addEventListener('scroll', () => {
       appear(text, wih)
     })
 
-    const pictures = project.firstElementChild
-    if (pictures.children.length > 1) {
-      new Siema({
-        selector: pictures,
-        loop: true
+    const hightlightDots = (dots, activeIndex) => {
+      for (let i = 0; i < dots.length; i++) {
+        if (i === activeIndex) {
+          dots[i].classList.add('active')
+        } else {
+          dots[i].classList.remove('active')
+        }
+      }
+    }
+
+    const carousel = project.querySelector('.carousel')
+    if (carousel) {
+      const left = project.querySelector('.left')
+      const right = project.querySelector('.right')
+      const dots = project.querySelector('.dots').children
+
+      const siema = new Siema({
+        selector: carousel,
+        loop: true,
+        onChange: function() {
+          hightlightDots(dots, this.currentSlide)
+        }
       })
+
+
+      // left arrow
+      left.addEventListener('click', () => siema.prev())
+
+      // right arrow
+      right.addEventListener('click', () => siema.next())
+
+      // dots
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', () => siema.goTo(i))
+      }
     }
   })
