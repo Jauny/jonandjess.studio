@@ -24,26 +24,26 @@
   top: 0;
   width: 10%;
   height: 100%;
-  padding: 0 5%;
-  z-index: 2;
+  padding: 0 28px;
   display: flex;
   justify-content: center;
 }
-.work .project .left img{
+.work .project .left img {
   transform: rotate(180deg);
+  width: 45px !important;
 }
 .work .project .right {
   cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
-  display: inline-block;
-  width: 10%;
   height: 100%;
-  padding: 0 5%;
-  z-index: 2;
+  padding: 0 28px;
   display: flex;
   justify-content: center;
+}
+.work .project .right img{
+  width: 45px !important;
 }
 .work .project .dots {
   display: flex;
