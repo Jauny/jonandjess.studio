@@ -19,31 +19,24 @@
   position: relative;
 }
 .work .project .left {
-  cursor: pointer;
+  cursor: url(../arrow-left.png), pointer;
   position: absolute;
   top: 0;
-  width: 10%;
+  width: 25%;
   height: 100%;
-  padding: 0 28px;
   display: flex;
   justify-content: center;
 }
-.work .project .left img {
-  transform: rotate(180deg);
-  width: 45px !important;
-}
 .work .project .right {
-  cursor: pointer;
+  cursor: url(../arrow-right.png), pointer;
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
+  width: 25%;
   padding: 0 28px;
   display: flex;
   justify-content: center;
-}
-.work .project .right img{
-  width: 45px !important;
 }
 .work .project .dots {
   display: flex;
