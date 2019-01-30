@@ -39,12 +39,15 @@
   justify-content: center;
 }
 .work .project .dots {
-  display: flex;
+  display: none;
   position: absolute;
   bottom: 20px;
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+.work .project .picture:hover .dots {
+  display: flex;
 }
 .work .project .dots .dot {
   cursor: pointer;
