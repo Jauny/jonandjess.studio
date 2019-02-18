@@ -89,40 +89,6 @@
   }
 }
 
-.capabilities {
-  margin: var(--section-gutter) 0;
-}
-.capabilities .skills {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-.capabilities .skill {
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 1s;
-}
-.capabilities .skill img {
-  width: 72px;
-}
-@media only screen and (max-width: 768px) {
-  .capabilities {
-    margin: var(--section-gutter) 0 0;
-  }
-  .capabilities .skills {
-    flex-wrap: wrap;
-    padding: calc(var(--section-gutter) / 2) 0;
-  }
-  .capabilities .skills .skill {
-    flex-basis: 50%;
-    margin-bottom: 50px;
-  }
-  .capabilities .skill img {
-    width: 50%;
-  }
-}
-
 .testimonials {
   position: relative;
   background-color: var(--darkGrey);
