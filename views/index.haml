@@ -81,18 +81,6 @@
     herOverlay.style.top = Math.min(0, (herTop - wih) * 0.7) + 'px'
   }
 
-  // checkmarks animations
-  const checkmarks = Array.from(document.getElementsByClassName('skill'))
-  const checkmarksAnimations = () => {
-    const checkmarksTop = checkmarks[0].getBoundingClientRect().top
-    if (window.innerHeight - checkmarksTop > 100) {
-      checkmarks.forEach(el => {
-        el.style.transform = 'translateY(0)'
-        el.style.opacity = 100
-      })
-    }
-  }
-
   // scrollarrow animation
   const arrow = document.getElementById('scrollarrow')
   const arrowFading = () => {
