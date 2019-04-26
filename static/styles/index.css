@@ -105,7 +105,7 @@
   transition: all 1s;
 }
 .capabilities .skill img {
-  width: 72px;
+  width: 48px;
 }
 @media only screen and (max-width: 768px) {
   .capabilities {
@@ -118,9 +118,6 @@
   .capabilities .skills .skill {
     flex-basis: 50%;
     margin-bottom: 50px;
-  }
-  .capabilities .skill img {
-    width: 50%;
   }
 }
 
