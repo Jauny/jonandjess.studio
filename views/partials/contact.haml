@@ -1,6 +1,6 @@
 .contact
   %h1 Say Hey
-  %p 
+  %p#sub-title
     Want to build something together? Leave us a note below and we'll get back to you in a jiffy.
     Or send us an email at
     %span.red hello@jonandjess.studio.
@@ -16,14 +16,17 @@
 
 :javascript 
   const submitContact = (e) => {
-    console.log('hello', e)
     e.preventDefault();
+
+    const subTitle = document.getElementById('sub-title');
+
     const xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     xmlhttp.open("POST", e.target.action);
     const formData = new FormData(e.target)
     const data = {}
     formData.forEach((v, k) => data[k] = v)
     xmlhttp.send(JSON.stringify(data))
-    e.target.style.opacity = 0
 
+    e.target.style.opacity = 0
+    subTitle.innerHTML = "Hey there! Thanks for reaching out to us. We'll be in touch within 24 hours."
   }
