@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "haml"
+gem "haml", "4.0.0"
 gem "rake"
 gem "guard"
 gem "guard-rake"
