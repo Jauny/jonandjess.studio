@@ -164,12 +164,13 @@
   transform: translateY(20px);
   opacity: 0;
   transition: all 1s;
-  width: 460px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: var(--header-height);
   margin-bottom: var(--header-height);
 }
+.contact a {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 768px) {
   .contact {
     width: 100%;

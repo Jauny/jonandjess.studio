@@ -91,7 +91,13 @@
     .dot
 
 .container.container-contact
-  = partial :contact
+  .contact
+    %h5 Say Hey
+    %h1
+      Want to build something together? Send us a note at
+      %a{:href => "mailto:hello@jonandjess.studio"}
+        = succeed "." do
+          %span.red hello@jonandjess.studio
 
 %script{:src => "static/js/siema.min.js"}
 :javascript 
