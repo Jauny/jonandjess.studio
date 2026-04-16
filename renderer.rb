@@ -25,5 +25,5 @@ def partial name, **kwargs
 end
 
 def parse_haml file
-  Haml::Engine.new(File.read(file))
+  Haml::Engine.new(File.read(file, encoding: "utf-8"))
 end
