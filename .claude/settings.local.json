@@ -7,7 +7,10 @@
       "Bash(bundle install *)",
       "Bash(rbenv versions *)",
       "Bash(rake)",
-      "Bash(rake pages *)"
+      "Bash(rake pages *)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }
