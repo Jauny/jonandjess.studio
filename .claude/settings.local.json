@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec *)",
+      "Bash(ruby --version)",
+      "Bash(gem --version)",
+      "Bash(bundle install *)",
+      "Bash(rbenv versions *)",
+      "Bash(rake)",
+      "Bash(rake pages *)"
+    ]
+  }
+}

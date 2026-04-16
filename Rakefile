@@ -1,7 +1,4 @@
 require "fileutils"
-require "haml"
-
-require_relative "renderer"
 
 SRC_DIR = "views/"
 SRC_FILES = "views/*.haml"
@@ -10,7 +7,19 @@ STATIC_DIR = "static/"
 
 task :default => :compile
 
-task :compile => [:cleanup, :static]
+# Cloudflare Pages build task — installs gems then compiles
+task :pages do
+  sh "bundle install"
+  Rake::Task[:compile].invoke
+end
+
+task :load_gems do
+  require "bundler/setup"
+  require "haml"
+  require_relative "renderer"
+end
+
+task :compile => [:load_gems, :cleanup, :static]
 
 task :dev => :compile do
   sh "open dist/index.html"
